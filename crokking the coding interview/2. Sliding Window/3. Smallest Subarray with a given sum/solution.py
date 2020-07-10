@@ -2,26 +2,17 @@ import math
 
 
 def solve(s, arr):
-    n = len(arr)
     min_length = math.inf
-
     start = 0
-    end = 0
-
     window_sum = 0
 
-    while end <= n:
-        # print(f'start: {start}, end: {end}, subarr: {arr[start:end]}')
-        if window_sum < s:
-            if end >= n:
-                break
-            window_sum += arr[end]
-            end += 1
-        elif window_sum >= s:
-            min_length = min(min_length, end - start)
+    for end in range(len(arr)):
+        window_sum += arr[end]
+        while window_sum >= s:
+            min_length = min(min_length, end - start + 1)
             window_sum -= arr[start]
             start += 1
-
+        
     return min_length
 
 
