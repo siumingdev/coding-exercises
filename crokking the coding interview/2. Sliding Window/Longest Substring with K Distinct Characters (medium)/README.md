@@ -12,4 +12,4 @@ Try all subarray. Number of subarray = $O(N^2)$, so time complexity is also $O(N
 
 Implemented in `solution.py`. Time complexity = $O(N)$. Space complexity = $O(K)$.
 
-Idea: supplement later
+Idea: Similar to previous one, just treat the substring as a subarray and use a hashmap to keep track of the counts of characters in current substring.
