@@ -1,14 +1,9 @@
-import time
-
-
 def cyclic_sort(arr):
-  i = 0
-  while i < len(arr):
-    if arr[i] == i + 1:
-      i += 1
-    else:
-      a, b = arr[arr[i] - 1], arr[i]
-      arr[i], arr[b - 1] = a, b
+  for i in range(len(arr)):
+    while i != arr[i] - 1:
+      j = arr[i] - 1
+      arr[i], arr[j] = arr[j], arr[i]
+      
   return arr
 
 
