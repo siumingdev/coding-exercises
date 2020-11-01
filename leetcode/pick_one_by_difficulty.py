@@ -35,7 +35,7 @@ Let $N$ be the number of elements in `arr`.
 
 $O(N)$
 
-### Space Complexity
+### Space Complexity:
 
 $O(1)$
 """
