@@ -38,6 +38,9 @@ $O(N)$
 ### Space Complexity:
 
 $O(1)$
+
+### Points to Note:
+
 """
 
 
@@ -45,7 +48,7 @@ def login_and_pick_one(login: str, password: str, difficulty: Difficulty):
   driver = webdriver.Firefox()
   driver.implicitly_wait(10)
 
-  driver.get(f"https://leetcode.com/problemset/all/?difficulty={difficulty.value}&status=Todo")
+  driver.get(f"https://leetcode.com/problemset/algorithms/?difficulty={difficulty.value}&status=Todo")
 
   elem = driver.find_element_by_link_text("Sign in")
   elem.click()
