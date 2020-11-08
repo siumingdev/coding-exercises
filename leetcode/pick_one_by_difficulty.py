@@ -46,7 +46,7 @@ $O(1)$
 
 def login_and_pick_one(login: str, password: str, difficulty: Difficulty):
   driver = webdriver.Firefox()
-  driver.implicitly_wait(10)
+  driver.implicitly_wait(100)
 
   driver.get(f"https://leetcode.com/problemset/algorithms/?difficulty={difficulty.value}&status=Todo")
 
